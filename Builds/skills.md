@@ -1,0 +1,7 @@
+##Skills
+
+
+    * Python
+    * Powershell
+    * Chef
+    * 
