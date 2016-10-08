@@ -1,7 +1,7 @@
 ##Skills
 
 
-    * Python
-    * Powershell
-    * Chef
-    * 
+  * Python
+  * Powershell
+  * Chef
+  * AWS

@@ -16,19 +16,22 @@
 #
 
 # Directory for CV
-cvDir=./
+cvDir=./output
 
 # Directory for CV Builds
 cvBuildDir=./Builds
 
 # Name of the CV file
 cvName="Andrew Crowley - CV - $(date +%Y-%m-%d)"
+cvFileName="Andrew_Crowley_CV_$(date +%Y_%m_%d)"
 
 #Path to .tex file
 texFile='crowley.tex'
 
 #Path to css file
 cssFile='crowley.css'
+
+#File Output Directory
 
 ###
 ## Create HTML files for each Markdown file
@@ -53,7 +56,6 @@ pandoc -s -H $cvBuildDir/$cssFile --section-divs -f markdown -t html5 \
 -A $cvBuildDir/experience.html \
 -A $cvBuildDir/qualifications.html \
 -A $cvBuildDir/interests.html \
--A $cvBuildDir/interviews.html \
 -A $cvBuildDir/references.html \
 -A $cvBuildDir/skills.html \
 $cvBuildDir/cv.md
@@ -62,7 +64,7 @@ $cvBuildDir/cv.md
 ## Convert the HTML CV into PDF CV
 #
 
-pandoc -H $cvBuildDir/$texFile "$cvDir/$cvName.html" -o "$cvDir/$cvName.pdf"
+pandoc -H $cvBuildDir/$texFile "$cvDir/$cvName.html" -o "$cvDir/$(echo $cvFileName).pdf"
 
 ###
 ## References
@@ -72,7 +74,7 @@ pandoc -H $cvBuildDir/$texFile "$cvDir/$cvName.html" -o "$cvDir/$cvName.pdf"
 pandoc --section-divs -f markdown -t html5 -o "$cvBuildDir/references.html" "$cvBuildDir/references.md"
 
 # Convert HTML to PDF
-pandoc -H $cvBuildDir/$texFile "$cvBuildDir/references.html" -o "$cvDir/Scott Granneman - References - $(date +%Y-%m-%d).pdf"
+pandoc -H $cvBuildDir/$texFile "$cvBuildDir/references.html" -o "$cvDir/$(echo $cvFileName).pdf"
 
 ###
 ## Cover Letter
@@ -82,4 +84,4 @@ pandoc -H $cvBuildDir/$texFile "$cvBuildDir/references.html" -o "$cvDir/Scott Gr
 pandoc --section-divs -f markdown -t html5 -o "$cvBuildDir/cover-letter.html" "$cvBuildDir/cover-letter.md"
 
 # Convert HTML to PDF
-pandoc -H $cvBuildDir/$texFile "$cvBuildDir/cover-letter.html" -o "$cvDir/Scott Granneman - Cover Letter - $(date +%Y-%m-%d).pdf"
+pandoc -H $cvBuildDir/$texFile "$cvBuildDir/cover-letter.html" -o "$cvDir/$(echo $cvFileName).pdf"
