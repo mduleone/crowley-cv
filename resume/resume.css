@@ -1,0 +1,165 @@
+body {
+    font-family: sans-serif;
+    -webkit-text-size-adjust: none;
+}
+
+/* Tags */
+
+header {
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    font-size: 19px;
+    padding: .5em;
+    background: white;
+}
+
+main {
+    position: relative;
+    margin-top: 2em;
+    bottom: 0;
+    width: 100%;
+    font-size: 19px;
+}
+
+a {
+    text-decoration: none;
+    color: dodgerblue;
+}
+a:hover {
+    text-decoration: underline;
+}
+
+.nav {
+    text-decoration: none;
+    /*border-right: 1px solid #000;*/
+    /*border-left: 1px solid #000;*/
+}
+.nav:hover {
+    color: black;
+    cursor: pointer;
+}
+nav a:hover {
+    text-decoration: underline;
+    /*color: #000;*/
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+}
+nav li {
+    display: inline-block;
+    padding: 0 0.5em;
+    border-left: 1px solid black;
+}
+nav li:first-child {
+    border-left: none;
+}
+nav {
+    float: right;
+    margin: 0 1em 0em 0em;
+}
+h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+/* Classes */
+.container {
+    position: relative;
+    width: 100%;
+    padding: 1em 0 0 0;
+    margin: auto;
+    font-size: 19px;
+}
+
+.resume {
+    font-size: 19px;
+    position: relative;
+    max-width: 736px;
+    margin: 0 auto;
+}
+.resume h2 {
+    font-family: sans-serif;
+    text-decoration: underline;
+    font-weight: bold;
+    font-size: 19px;
+    margin: 0;
+    display: block;
+}
+
+.resume h3 {
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 19px;
+    margin: 0;
+    display: inline-block;
+}
+
+.resume h4 {
+    font-family: sans-serif;
+    font-style: italic;
+    font-weight: normal;
+    font-size: 19px;
+    margin: 0;
+    display: inline-block;
+}
+
+.resume .section {
+    margin: .5em 0;
+}
+
+.resume .section:first-child {
+    margin-top: 0;
+}
+
+.resume .subsection {
+    margin-bottom: .5em;
+}
+
+.resume .subsection:last-child {
+    margin-bottom: 0;
+}
+
+.resume .date {
+    float: right;
+}
+
+.resume .content {
+    text-align: justify;
+}
+
+@media only screen and (max-width: 736px) {
+    .resume .date {
+        display: block;
+        float: none;
+    }
+
+    .resume .section {
+        float: left;
+        margin: .25em 0;
+    }
+    .resume h3 {
+        display: block;
+    }
+    .resume h4 {
+        display: block;
+    }
+
+    .resume .content {
+        text-align: left;
+    }
+}
+
+@media only screen and (max-width: 520px) {
+    a:hover{
+        text-decoration: none;
+        background: transparent;
+    }
+    .container {
+        height: auto;
+    }
+}
