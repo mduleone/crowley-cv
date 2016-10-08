@@ -1,27 +1,9 @@
-body {
-    font-family: Georgia, 'Myriad Pro', 'Trebuchet MS', Helvetica, Arial;
-    -webkit-text-size-adjust: none;
-}
-
 /* Tags */
 
-header {
-    position: fixed;
-    z-index: 1;
-    left: 0;
-    top: 0;
-    width: 100%;
-    font-size: 19px;
-    padding: .5em;
-    background: white;
-}
-
-main {
-    position: relative;
-    margin-top: 2em;
-    bottom: 0;
-    width: 100%;
-    font-size: 19px;
+body {
+    font-family: sans-serif;
+    -webkit-text-size-adjust: none;
+    background: #f0f0f0;
 }
 
 a {
@@ -32,36 +14,6 @@ a:hover {
     text-decoration: underline;
 }
 
-.nav {
-    text-decoration: none;
-    /*border-right: 1px solid #000;*/
-    /*border-left: 1px solid #000;*/
-}
-.nav:hover {
-    color: black;
-    cursor: pointer;
-}
-nav a:hover {
-    text-decoration: underline;
-    /*color: #000;*/
-}
-
-ul {
-    padding: 0;
-    margin: 0;
-}
-nav li {
-    display: inline-block;
-    padding: 0 0.5em;
-    border-left: 1px solid black;
-}
-nav li:first-child {
-    border-left: none;
-}
-nav {
-    float: right;
-    margin: 0 1em 0em 0em;
-}
 h1 {
     font-size: 2.5em;
     margin-bottom: 10px;
@@ -71,7 +23,6 @@ h1 {
 .container {
     position: relative;
     width: 100%;
-    padding: 1em 0 0 0;
     margin: auto;
     font-size: 19px;
 }
@@ -80,7 +31,16 @@ h1 {
     font-size: 19px;
     position: relative;
     max-width: 736px;
-    margin: 0 auto;
+    margin: 0 auto 1em auto;
+    background: #ffffff;
+    padding: 2em;
+    box-shadow: 0 0 6px #ccc;
+}
+.resume h1 {
+    font-family: Georgia, 'Myriad Pro', 'Trebuchet MS', Helvetica, Arial;
+    border-bottom: 1px solid black;
+    padding-bottom: 5px;
+    margin-bottom: .5em;
 }
 .resume h2 {
     font-family: sans-serif;
@@ -137,6 +97,8 @@ h4.u-inline {
 }
 
 ul {
+    padding: 0;
+    margin: 0;
     list-style-position: outside;
 }
 
@@ -149,7 +111,7 @@ li > ul {
     margin-left: 1.5em;
 }
 
-@media only screen and (max-width: 736px) {
+@media only screen and (max-width: 800px) {
     .resume {
         margin: 0.5em;
     }
@@ -160,7 +122,7 @@ li > ul {
     }
 
     .resume .section {
-        float: left;
+        float: none;
         margin: .25em 0;
     }
     .resume h3 {
