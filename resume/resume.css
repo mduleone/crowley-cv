@@ -105,7 +105,7 @@ h1 {
     font-weight: normal;
     font-size: 19px;
     margin: 0;
-    display: inline-block;
+    display: block;
 }
 
 .resume .section {
@@ -132,7 +132,30 @@ h1 {
     text-align: justify;
 }
 
+h4.u-inline {
+    display: inline-block;
+}
+
+ul {
+    margin-left: 1.5em;
+    padding-left: 0;
+    list-style-type: disc;
+    list-style-position: outside;
+}
+
+li {
+    margin: 0.25em 0;
+}
+
+li > ul {
+    list-style-type: circle;
+}
+
 @media only screen and (max-width: 736px) {
+    .resume {
+        margin: 0.5em;
+    }
+
     .resume .date {
         display: block;
         float: none;
