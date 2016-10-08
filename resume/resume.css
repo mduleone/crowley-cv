@@ -137,9 +137,6 @@ h4.u-inline {
 }
 
 ul {
-    margin-left: 1.5em;
-    padding-left: 0;
-    list-style-type: disc;
     list-style-position: outside;
 }
 
@@ -148,7 +145,8 @@ li {
 }
 
 li > ul {
-    list-style-type: circle;
+    list-style-type: disc;
+    margin-left: 1.5em;
 }
 
 @media only screen and (max-width: 736px) {
